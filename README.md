@@ -10,26 +10,12 @@ A collection of ML notebooks and experiments using Kaggle and other datasets.
 ## Getting Started
 
 ```bash
-# Clone and reproduce the exact environment
+# Clone and set up the environment
 uv sync
 
 # Launch JupyterLab
 uv run jupyter lab
 ```
-
-The `uv.lock` file pins all dependency versions so the environment is fully reproducible.
-
-### `uv run jupyter lab` vs activating the venv manually
-
-Both run JupyterLab from the project's `.venv` — the difference is convenience:
-
-| | `uv run jupyter lab` | `source .venv/bin/activate && jupyter lab` |
-|---|---|---|
-| Venv activation | Automatic | Manual |
-| Syncs with `uv.lock` before running | Yes | No |
-| Best for | Quick one-off launches | Interactive sessions with multiple commands |
-
-**Recommendation:** Use `uv run jupyter lab` for day-to-day work — it guarantees the environment is up to date before launching.
 
 ## Project Structure
 
