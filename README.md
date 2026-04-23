@@ -13,6 +13,9 @@ A collection of ML notebooks and experiments using Kaggle and other datasets.
 # Clone and set up the environment
 uv sync
 
+# Install the nbstripout git hook (strips cell outputs before every commit)
+uv run nbstripout --install
+
 # Launch JupyterLab
 uv run jupyter lab
 ```
