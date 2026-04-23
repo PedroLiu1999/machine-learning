@@ -15,6 +15,7 @@ wheels/
 
 # Data files (add specific datasets you don't want tracked)
 data/raw/
+projects/*/data/raw/
 *.csv
 *.parquet
 *.feather
@@ -27,6 +28,7 @@ data/raw/
 
 # Model artifacts
 models/
+projects/*/models/
 *.joblib
 
 # Environment / secrets

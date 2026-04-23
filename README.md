@@ -24,11 +24,28 @@ uv run jupyter lab
 
 ```
 machine-learning/
-├── notebooks/       # Jupyter notebooks by project/dataset
-├── data/            # Raw and processed data (raw/ is gitignored)
-├── models/          # Saved model artifacts (gitignored)
+├── projects/
+│   ├── titanic/
+│   │   ├── notebooks/
+│   │   ├── data/
+│   │   │   ├── raw/          # gitignored
+│   │   │   └── processed/    # optional
+│   │   ├── models/           # gitignored
+│   │   └── README.md
+│   └── house-prices/
+│       └── ...
+├── shared/                   # reusable helper code across projects
+├── scripts/                  # automation scripts (download, prep, train)
 ├── pyproject.toml   # Project dependencies
 └── uv.lock          # Pinned lockfile for reproducibility
+```
+
+Recommended approach: create one folder per dataset/project under `projects/`.
+
+Example:
+
+```bash
+mkdir -p projects/titanic/{notebooks,data/raw,data/processed,models}
 ```
 
 ## Adding Dependencies
