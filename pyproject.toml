@@ -12,3 +12,9 @@ dependencies = [
     "scikit-learn>=1.8.0",
     "statsmodels>=0.14.6",
 ]
+
+[dependency-groups]
+dev = [
+    "jupyterlab-git>=0.52.0",
+    "nbstripout>=0.9.1",
+]
