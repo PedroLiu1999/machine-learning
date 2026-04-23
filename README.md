@@ -20,6 +20,31 @@ uv run nbstripout --install
 uv run jupyter lab
 ```
 
+## Project Set Up
+
+Use one folder per dataset under `projects/`.
+
+```bash
+# 1) Create a new project folder
+mkdir -p projects/titanic/{notebooks,data/raw,data/processed,models}
+
+# 2) Download dataset reproducibly with metadata recorded
+scripts/download_kaggle.sh titanic heptapod/titanic
+
+# 3) Record raw-data checksums for reproducibility
+scripts/hash_data.sh titanic
+
+# 4) Start notebooks
+uv run jupyter lab
+```
+
+Reproducibility notes:
+
+- Commit `pyproject.toml` and `uv.lock` for environment reproducibility.
+- Keep `projects/<name>/data/source.json` and `projects/<name>/data/raw.sha256` in Git.
+- Keep `projects/<name>/data/raw/` and `projects/<name>/data/processed/` out of Git.
+- Keep Kaggle credentials in `~/.kaggle/kaggle.json` (never commit).
+
 ## Project Structure
 
 ```

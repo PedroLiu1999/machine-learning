@@ -1,0 +1,6 @@
+{
+  "provider": "kaggle",
+  "dataset_slug": "owner/dataset-name",
+  "downloaded_at_utc": "YYYY-MM-DDTHH:MM:SSZ",
+  "command": "uv run kaggle datasets download -d owner/dataset-name -p projects/<project>/data/raw --unzip"
+}
