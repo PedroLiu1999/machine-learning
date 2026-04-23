@@ -34,7 +34,10 @@ scripts/download_kaggle.sh titanic heptapod/titanic
 # 3) Record raw-data checksums for reproducibility
 scripts/hash_data.sh titanic
 
-# 4) Start notebooks
+# 4) Validate raw-data checksums (OK/FAILED per file)
+scripts/verify_data.sh titanic
+
+# 5) Start notebooks
 uv run jupyter lab
 ```
 
