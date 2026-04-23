@@ -1,0 +1,6 @@
+{
+  "provider": "kaggle",
+  "dataset_slug": "adilshamim8/credit-risk-benchmark-dataset",
+  "downloaded_at_utc": "2026-04-23T19:25:42Z",
+  "command": "uv run kaggle datasets download -d adilshamim8/credit-risk-benchmark-dataset -p projects/credit-risk/data/raw --unzip"
+}
