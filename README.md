@@ -5,7 +5,7 @@ A collection of ML notebooks and experiments using Kaggle and other datasets.
 ## Stack
 
 - **Python 3.12** managed via [uv](https://github.com/astral-sh/uv)
-- numpy, pandas, scikit-learn, statsmodels, matplotlib, jupyterlab
+- numpy, pandas, scikit-learn, statsmodels, matplotlib, ipykernel
 
 ## Getting Started
 
@@ -16,9 +16,11 @@ uv sync
 # Install the nbstripout git hook (strips cell outputs before every commit)
 uv run nbstripout --install
 
-# Launch JupyterLab
-uv run jupyter lab
+# Register VS Code notebook kernel (one time)
+uv run python -m ipykernel install --user --name machine-learning --display-name "Python (machine-learning)"
 ```
+
+Then in VS Code, open any `.ipynb` notebook and select the **Python (machine-learning)** kernel.
 
 ## Project Set Up
 
@@ -37,8 +39,7 @@ scripts/hash_data.sh titanic
 # 4) Validate raw-data checksums (OK/FAILED per file)
 scripts/verify_data.sh titanic
 
-# 5) Start notebooks
-uv run jupyter lab
+# 5) Open notebooks in VS Code and select kernel: Python (machine-learning)
 ```
 
 Reproducibility notes:

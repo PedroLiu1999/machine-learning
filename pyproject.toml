@@ -5,7 +5,6 @@ description = "Add your description here"
 requires-python = ">=3.12"
 dependencies = [
     "ipykernel>=7.2.0",
-    "jupyterlab>=4.5.6",
     "kaggle>=2.0.2",
     "matplotlib>=3.10.8",
     "numpy>=2.4.4",
@@ -16,6 +15,5 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "jupyterlab-git>=0.52.0",
     "nbstripout>=0.9.1",
 ]
